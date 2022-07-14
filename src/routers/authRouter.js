@@ -21,7 +21,7 @@ authRouter.route('/signUp').post((req, res) => {
       const results = await db.collection('users').insertOne(user);
       debug(results);
       req.login(results.ops[0], () => {
-        res.redirect('/auth/profile');
+        res.redirect('/home');
       });
     } catch (error) {
       debug(error);
