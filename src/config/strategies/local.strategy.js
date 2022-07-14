@@ -14,7 +14,6 @@ module.exports = function localStrategy() {
         const url =
           'mongodb+srv://admin:admin@cluster0.skns22l.mongodb.net/?retryWrites=true&w=majority';
         const dbName = 'myshop';
-        
         (async function validateUser() {
           let client;
           try {

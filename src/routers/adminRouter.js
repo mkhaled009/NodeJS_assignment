@@ -20,18 +20,14 @@ adminRouter.route('/').post((req, res) => {
       const db = client.db(dbName);
       const product = { name, descreption , image};
       const results = await db.collection('products').insertOne(product);
-      await res.render('products');
-      
-       
-     
+      await res.redirect('products');
 
- 
     } catch (error) {
       debug(error);
     }
     client.close();
     
-  })(res.render('products'));
+  })();
 });
 
 

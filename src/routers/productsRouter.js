@@ -52,8 +52,8 @@ productsRouter.route('/:id').get((req, res) => {
         .findOne({ _id: new ObjectID(id) });
 
       
-    await  res.render('product', {
-        product
+     await res.render('product', {
+        product,
       });
     } catch (error) {
       debug(error.stack);
