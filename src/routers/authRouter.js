@@ -37,7 +37,7 @@ authRouter
   })
   .post(
     passport.authenticate('local', {
-      successRedirect: '/auth/profile',
+      successRedirect: '/home',
       failureRedirect: '/',
     })
   );
